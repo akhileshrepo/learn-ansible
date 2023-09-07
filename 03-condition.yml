@@ -3,7 +3,7 @@
   connection: local
   vars:
     fruit: true
-    vegatable: false
+    vegetable: false
 
   tasks:
     - name: Print Fruit Name
@@ -14,4 +14,4 @@
     - name: Print Vegetable Name
       ansible.builtin.debug:
         msg: Vegetable Name - Carrot
-      when: vegatable is true
+      when: vegetable is true
