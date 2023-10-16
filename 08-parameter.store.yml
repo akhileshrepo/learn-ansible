@@ -1,4 +1,4 @@
-- name: Demo for AWS Patameter store
+- name: Demo for AWS Parameter store
   hosts: localhost
   connection: local
   tasks:
