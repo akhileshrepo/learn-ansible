@@ -4,7 +4,7 @@
   vars:
     URL: google.com
   tasks:
-    -name: print variable
+    - name: print variable
       ansible.builtin.debug:
         msg: URL = {{ URL }}
 #ansible access the variables with two flower braces
