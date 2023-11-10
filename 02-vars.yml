@@ -1,5 +1,6 @@
 - name: variable
-  hosts: WEB
+  hosts: localhost
+  connection: local
   vars:
     URL: google.com
   tasks:
