@@ -6,15 +6,8 @@
       ansible.builtin.yum:
         name: httpd
         state: latest
-
     - name: Start Nginx
-      ansible.builtin.systemd_service:
+      ansible.builtin.systemd:
         name: nginx
         state: started
         enabled: yes
-
-- name: Install Nginx
-  hosts: WEB
-  become: true
-  roles:
-    - sample
