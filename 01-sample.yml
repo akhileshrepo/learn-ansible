@@ -7,7 +7,7 @@
         name: httpd
         state: latest
     - name: Start Nginx
-      ansible.builtin.systemd:
+      ansible.builtin.systemd_service:
         name: nginx
         state: restarted
         enabled: yes
