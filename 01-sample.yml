@@ -13,7 +13,7 @@
         enabled: yes
 
 - name: Install nginx
-  hosts: APP
+  hosts: WEB
   become: true
   roles:
     - sample
