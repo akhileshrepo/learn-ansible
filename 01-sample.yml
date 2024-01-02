@@ -1,5 +1,5 @@
 - name: Install Nginx
-  hosts: WEB
+  hosts: [WEB,PP]
   become: true
   tasks:
     - name: Install nginx
