@@ -1,5 +1,5 @@
 - name: Install Nginx
-  hosts: APP
+  hosts: WEB
   become: true
   tasks:
     - name: Install nginx
@@ -13,7 +13,7 @@
         enabled: yes
 
 - name: Install nginx
-  hosts: WEB
+  hosts: APP
   become: true
   roles:
     - sample
