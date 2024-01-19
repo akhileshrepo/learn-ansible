@@ -4,4 +4,4 @@
   tasks:
     - name: fetch some value
       ansible.builtin.debug:
-        msg: "{{ lookup('amazon.aws.aws_ssm', 'rds.dev.database_name', region='us-east-1') }}"
+        msg: "{{ lookup('amazon.aws.aws_ssm', 'docdb.dev.endpoint', region='us-east-1') }}"
