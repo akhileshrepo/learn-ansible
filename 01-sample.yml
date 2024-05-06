@@ -1,5 +1,5 @@
 - name: INstall Nginx
-  hosts: all
+  hosts: WEB
   become: true
   tasks:
     - name: Install nginx
@@ -13,9 +13,9 @@
         state: started
         enabled: yes
 
-#- name: Install nginx
-#  hosts: WEB
-#  become: true
-#  roles:
-#    - sample
+- name: Install nginx
+  hosts: WEB
+  become: true
+  roles:
+    - sample
 
