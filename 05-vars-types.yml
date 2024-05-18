@@ -1,12 +1,13 @@
-- name: Variable Types
+- name: Demo on vars type
   hosts: localhost
   connection: local
+  become: true
   vars:
-    fruit_name: Orange # string
-    quantity: 100 # number
-    for_sale: 'true' # boolean, Booleans supported by ansible are yes/no true/false , Boolean becomes string if you quote it.
+    Fruit_Name: "apple"
+    Quantity: 100
+    for_sale: 'true'
   tasks:
-    - name: Print
+    - name: Print Business Message
       ansible.builtin.debug:
-        msg: Fruit Name - {{ fruit_name }}, Quantity - {{ quantity }}
-      when: for_sale
+        msg: Fruit Name - {{ Fruit_Name }}, Quantity - {{ Quantity }}
+      for_sale: true
