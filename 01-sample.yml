@@ -1,15 +1,12 @@
 - name: Nginx
-  hosts: localhost
-  connection: local
+  hosts: all
   become: true
   tasks:
-    - name: Install Nginx
+    - name: Install nginx
       ansible.builtin.yum:
-        name: nginx
-        state: installed
+        name: httpd
+        state: latest
     - name: Restart Nginx
-      ansible.builtin.systemd:
+      ansible.builtin.systemd_service:
         name: nginx
-        state: started
-        enabled: true
-
+        state: restarted
