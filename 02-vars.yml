@@ -4,6 +4,6 @@
   vars:
     URL: play.google.com
   tasks:
-    name: Demo on variable
-    ansible.builtin.debug:
-      - msg: URL = {{ URL }}
+    - name: Demo on variable
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
