@@ -11,4 +11,4 @@
     - name: Print Fruit Names
       ansible.builtin.debug:
         msg: Fruit Name - {{ item.fruits }}
-      loops: {{ fruits }}
+      loop: {{ fruits }}
