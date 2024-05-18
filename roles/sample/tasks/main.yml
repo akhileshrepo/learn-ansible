@@ -1,12 +1,3 @@
-- name: Install nginx
-  ansible.builtin.yum:
-    name: httpd
-    state: latest
-- name: Start Nginx
-  ansible.builtin.systemd:
-    name: nginx
-    state: started
-    enabled: yes
 
 #- name: Print variable
 #  ansible.builtin.debug:
@@ -17,3 +8,13 @@
 #    msg: URL = {{ URL }}
 #  vars:
 #    URL: tasks.google.com
+
+
+- name: Install nginx
+  ansible.builtin.yum:
+    name: httpd
+    state: latest
+- name: Restart Nginx
+  ansible.builtin.systemd_service:
+    name: nginx
+    state: restarted
