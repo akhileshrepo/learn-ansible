@@ -9,5 +9,5 @@
   tasks:
     - name: Print Business Message
       ansible.builtin.debug:
-        msg: Fruit Name - {{ Fruit_Name }}, Quantity - {{ Quantity }}
+        msg: "Fruit Name - {{ Fruit_Name }}, Quantity - {{ Quantity }}"
       for_sale: true
