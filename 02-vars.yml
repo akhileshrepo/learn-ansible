@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
   vars:
-    - URL: play.google.com
+    URL: play.google.com
   tasks:
     name: Demo on variable
     ansible.builtin.debug:
