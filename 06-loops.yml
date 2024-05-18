@@ -12,3 +12,12 @@
       ansible.builtin.debug:
         msg: Fruit Name - {{ item }}
       loop: "{{ fruits }}"
+
+    - name: Print Fruit Name - sample
+      ansible.builtin.debug:
+        msg: Fruit Name - {{ item }}
+      loop:
+        - potato
+        - tomato
+        - pineapple
+        - apple
