@@ -1,4 +1,4 @@
-- name: Variable Precedence
+- name: Demo on variables
   hosts: localhost
   connection: local
   vars:

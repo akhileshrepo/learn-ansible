@@ -1,20 +1,20 @@
 
-#- name: Print variable
-#  ansible.builtin.debug:
-#    msg: URL = {{ URL }}
-#
-#- name: Print variable - task variable defined
-#  ansible.builtin.debug:
-#    msg: URL = {{ URL }}
-#  vars:
-#    URL: tasks.google.com
+- name: Print variable
+  ansible.builtin.debug:
+    msg: URL = {{ URL }}
+
+- name: Print variable - task variable defined
+  ansible.builtin.debug:
+    msg: URL = {{ URL }}
+  vars:
+    URL: tasks.google.com
 
 
-- name: Install nginx
-  ansible.builtin.yum:
-    name: httpd
-    state: latest
-- name: Restart Nginx
-  ansible.builtin.systemd_service:
-    name: nginx
-    state: restarted
+#- name: Install nginx
+#  ansible.builtin.yum:
+#    name: httpd
+#    state: latest
+#- name: Restart Nginx
+#  ansible.builtin.systemd_service:
+#    name: nginx
+#    state: restarted
