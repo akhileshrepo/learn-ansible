@@ -4,6 +4,7 @@
   vars:
     fruit_name:
       - apple
+      - banana
   tasks:
     - name: Print Template
       ansible.builtin.template:
