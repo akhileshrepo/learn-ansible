@@ -1,17 +1,16 @@
 - name: Demo on conditions
   hosts: localhost
   connection: local
+  become: true
   vars:
-    fruit: true
-    vegetable: false
-
+    Fruit: true
+    Vegetable: true
   tasks:
-    - name: Print Fruit Name
+    - name: Demo on fruits
       ansible.builtin.debug:
-        msg: Fruit Name - Apple
-      when: fruit is true
-
-    - name: Print Vegetable Name
+        msg: Fruit Name - carrot
+      when: Fruit is true
+    - name: Demo on vegetable
       ansible.builtin.debug:
-        msg: Vegetable Name - Carrot
-      when: vegetable is true
+        msg: Vegetable Name - Tomato
+      when: Vegetable is true
