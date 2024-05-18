@@ -6,4 +6,4 @@
   tasks:
     name: Demo on variable
     ansible.builtin.debug:
-      - Print URL: {{ URL }}
+      - msg: URL = {{ URL }}
