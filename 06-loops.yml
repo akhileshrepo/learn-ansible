@@ -21,3 +21,10 @@
         - tomato
         - pineapple
         - apple
+    - name: Print Vegetable names
+      ansible.builtin.debug:
+        msg: Fruit Name - {{ item.fruit_name }}, Quantity - {{ item.quantity }}
+      loop:
+        - {{ fruit_name: "apple", quantity: 100 }}
+        - {{ fruit_name: "banana", quantity: 200 }}
+        - {{ fruit_name: "tomato", quantity: 250 }}
