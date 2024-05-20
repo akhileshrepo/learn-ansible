@@ -1,15 +1,14 @@
-- name: Demo on templates
-  hosts: localhost
-  connection: local
+- name: Demo on Laptops
+  hosts: all
   become: true
   vars:
-    fruit_name:
-      - apple
-      - banana
-      - pineapple
-      - sweet
+    laptop_name:
+      - hp
+      - lenovo
+      - samsung
   tasks:
-    - name: print fruit name
+    - name: Print Laptop service name
       ansible.builtin.template:
         src: test.txt
         dest: /tmp/test.txt
+

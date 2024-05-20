@@ -1,1 +1,1 @@
-Fruit Name is {{ fruit_name }}
+Laptop name is {{ laptop_name }}
