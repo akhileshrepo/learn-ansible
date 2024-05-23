@@ -1,1 +1,1 @@
-Laptop name is {{ laptop_name }}
+My car name is {{ car_name }}

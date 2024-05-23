@@ -1,14 +1,13 @@
-- name: Demo on Laptops
+- name: Demo on ansible template
   hosts: all
-  become: true
+  connection: local
   vars:
-    laptop_name:
-      - hp
-      - lenovo
-      - samsung
+    car_name:
+      - Nexa
   tasks:
-    - name: Print Laptop service name
+    - name: Print Message
       ansible.builtin.template:
         src: test.txt
         dest: /tmp/test.txt
+
 
