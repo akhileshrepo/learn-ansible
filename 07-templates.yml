@@ -2,8 +2,7 @@
   hosts: all
   connection: local
   vars:
-    car_name:
-      - Nexa
+    car_name: Nexa
   tasks:
     - name: Print Message
       ansible.builtin.template:
