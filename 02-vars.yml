@@ -7,3 +7,8 @@
     - name: Print variable
       ansible.builtin.debug:
         msg: URL = {{ URL }}
+    - name: Declare Task level variable
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
+      vars:
+        URL: tasks.google.com
