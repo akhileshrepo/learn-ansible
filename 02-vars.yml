@@ -1,9 +1,9 @@
-- name: Demo on variables
+- name: Variable
   hosts: localhost
   connection: local
-  variables:
-    URL: news.google.com
+  vars:
+    URL: play.google.com
   tasks:
     - name: Print variable
       ansible.builtin.debug:
-        URL: News website is {{ URL }}
+        msg: URL = {{ URL }}
