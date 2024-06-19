@@ -5,7 +5,7 @@
   vars:
     Fruit_Name: "apple"
     Quantity: 100
-    for_sale: 'false'
+    for_sale: 'true'
   tasks:
     - name: Print Business Message
       ansible.builtin.debug:

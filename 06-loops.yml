@@ -1,30 +1,47 @@
+#- name: Demo on loops
+#  hosts: localhost
+#  connection: local
+#  vars:
+#    fruits:
+#      - apple
+#      - banana
+#      - pineapple
+#      - sweet potato
+#  tasks:
+#    - name: Print Fruit Names
+#      ansible.builtin.debug:
+#        msg: Fruit Name - {{ item }}
+#      loop: "{{ fruits }}"
+#
+#    - name: Print Fruit Name - sample
+#      ansible.builtin.debug:
+#        msg: Fruit Name - {{ item }}
+#      loop:
+#        - potato
+#        - tomato
+#        - pineapple
+#        - apple
+#    - name: Print Vegetable names
+#      ansible.builtin.debug:
+#        msg: Fruit Name - {{ item.fruit_name }}, Quantity - {{ item.quantity }}
+#      loop:
+#        - { fruit_name: "apple", quantity: 100 }
+#        - { fruit_name: "banana", quantity: 200 }
+#        - { fruit_name: "tomato", quantity: 250 }
+
 - name: Demo on loops
   hosts: localhost
   connection: local
   vars:
     fruits:
-      - apple
       - banana
+      - apple
+      - potato
       - pineapple
-      - sweet potato
   tasks:
-    - name: Print Fruit Names
-      ansible.builtin.debug:
-        msg: Fruit Name - {{ item }}
-      loop: "{{ fruits }}"
+    name: Print Fruit Names
+    ansible.builtin.debug:
+      msg: Fruit name is {{ item }}
+    loop: "{{ fruits }}"
 
-    - name: Print Fruit Name - sample
-      ansible.builtin.debug:
-        msg: Fruit Name - {{ item }}
-      loop:
-        - potato
-        - tomato
-        - pineapple
-        - apple
-    - name: Print Vegetable names
-      ansible.builtin.debug:
-        msg: Fruit Name - {{ item.fruit_name }}, Quantity - {{ item.quantity }}
-      loop:
-        - { fruit_name: "apple", quantity: 100 }
-        - { fruit_name: "banana", quantity: 200 }
-        - { fruit_name: "tomato", quantity: 250 }
+
