@@ -39,9 +39,17 @@
       - potato
       - pineapple
   tasks:
-    name: Print Fruit Names
-    ansible.builtin.debug:
-      msg: Fruit name is {{ item }}
-    loop: "{{ fruits }}"
+    - name: Print Fruit Names
+      ansible.builtin.debug:
+        msg: Fruit name is {{ item }}
+      loop: "{{ fruits }}"
+
+    - name: Print Fruit Names - Examples
+      ansible.builtin.debug:
+        msg: Fruit message is {{ item }}
+      loop:
+        - potato
+        - pineapple
+        - tomato
 
 
