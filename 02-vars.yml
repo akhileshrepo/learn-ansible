@@ -1,13 +1,13 @@
-- name: Variable
+- name: Demo on variables
   hosts: localhost
   connection: local
-  vars:
+  var:
     URL: play.google.com
   tasks:
-    - name: Print variable
+    - name: Print Demo variable
       ansible.builtin.debug:
         msg: URL = {{ URL }}
-    - name: Declare Task level variable
+    - name: Print Task variable
       ansible.builtin.debug:
         msg: URL = {{ URL }}
       vars:
