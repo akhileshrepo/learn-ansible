@@ -1,5 +1,5 @@
 - name: Nginx
   hosts: all
   become: true
-  roles:
+  role:
     - sample
