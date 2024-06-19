@@ -2,5 +2,7 @@
   hosts: localhost
   connection: local
   become: true
+  vars:
+    URL: play.google.com
   roles:
     - sample
