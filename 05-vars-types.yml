@@ -5,8 +5,9 @@
   vars:
     Fruit_Name: "apple"
     Quantity: 100
-    for_sale: 'true'
+    for_sale: 'false'
   tasks:
     - name: Print Business Message
       ansible.builtin.debug:
         msg: "Fruit Name - {{ Fruit_Name }}, Quantity - {{ Quantity }}"
+      when: for_schema is defined
