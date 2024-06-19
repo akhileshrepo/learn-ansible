@@ -51,7 +51,6 @@
         - potato
         - pineapple
         - tomato
-
     - name: Print Fruit details
       ansible.builtin.debug:
         msg: "Fruit name is {{ item.Fruit_name }}, Quantity is {{ quantity }}"
