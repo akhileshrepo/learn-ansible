@@ -10,4 +10,4 @@
     - name: Print Business Message
       ansible.builtin.debug:
         msg: "Fruit Name - {{ Fruit_Name }}, Quantity - {{ Quantity }}"
-      when: for_schema is defined
+      when: for_sale is defined
