@@ -1,1 +1,1 @@
-My car name is {{ car_name }}
+My name is {{ name }}

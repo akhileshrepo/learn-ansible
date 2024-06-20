@@ -1,14 +1,8 @@
-- name: Demo on ansible template
-  hosts: all
+- name: Demo on template
+  hosts: localhost
   connection: local
-  vars:
-    car_name: Nexa
   tasks:
-    - name: Print Message
-      ansible.builtin.template:
+    - name: Print My name
+      ansible.builtin.debug:
         src: test.txt
-        dest: /tmp/test.txt
-
-# Im commiting the code
-
-
+        dest: sample.txt
