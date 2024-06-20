@@ -22,7 +22,7 @@
         - mouse
     - name: Print Fruit Name - 3
       ansible.builtin.debug:
-        msg: Fruit Name is {{ item }}
+        msg: Fruit Name is {{ item.Fruit Name }}, Quantity is {{ item.Quantity }}
       loop:
         - { Fruit Name: "apple", Quantity: 100 }
         - { Fruit Name: "tomato", Quantity: 500 }
