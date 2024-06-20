@@ -13,4 +13,11 @@
       ansible.builtin.debug:
         msg: Fruit Name is {{ item }}
       loop: "{{ fruits }}"
+    - name: Print Fruit Name - 2
+      ansible.builtin.debug:
+        msg: Fruit Name is {{ item }}
+      loop:
+        - tomato
+        - potato
+        - mouse
 
