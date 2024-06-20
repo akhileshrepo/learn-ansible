@@ -2,7 +2,8 @@
   hosts: localhost
   connection: local
   vars:
-    name: [ "Akhilesh" ]
+    name:
+      - Akhilesh
   tasks:
     - name: Print My name
       ansible.builtin.template:
