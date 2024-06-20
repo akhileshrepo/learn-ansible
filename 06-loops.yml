@@ -9,7 +9,7 @@
       - Orange
       - Sweet potato
   tasks:
-    - name: Print Fruit Names - 1
+    - name: Print Fruit Names
       ansible.builtin.debug:
         msg: Fruit Name List - {{ list }}
       loop: "{{ fruits }}"
