@@ -1,31 +1,17 @@
-
 - name: Demo on loops
   hosts: localhost
   connection: local
   vars:
     fruits:
-      - banana
       - apple
-      - potato
       - pineapple
+      - Gauva
+      - Orange
+      - Sweet potato
   tasks:
-    - name: Print Fruit Names
+    - name: Print Fruit Names - 1
       ansible.builtin.debug:
-        msg: "Fruit name is {{ item }}"
+        msg: Fruit Name List - {{ list }}
       loop: "{{ fruits }}"
-
-    - name: Print Fruit Names - Examples
-      ansible.builtin.debug:
-        msg: "Fruit message is {{ item }}"
-      loop:
-        - potato
-        - pineapple
-        - tomato
-    - name: Print Fruit details
-      ansible.builtin.debug:
-        msg: "Fruit name is {{ item.Fruit_name }}, Quantity is {{ item.quantity }}"
-      loop:
-        - { Fruit_name: "apple", quantity: 100}
-        - { Fruit_name: "orange", quantity: 150 }
 
 
