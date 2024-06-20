@@ -3,6 +3,6 @@
   connection: local
   tasks:
     - name: Print My name
-      ansible.builtin.debug:
+      ansible.builtin.template:
         src: test.txt
         dest: sample.txt
