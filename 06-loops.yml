@@ -11,7 +11,6 @@
   tasks:
     - name: Print Fruit Names
       ansible.builtin.debug:
-        msg: Fruit Name List - {{ list }}
+        msg: Fruit Name is {{ item }}
       loop: "{{ fruits }}"
-
 
